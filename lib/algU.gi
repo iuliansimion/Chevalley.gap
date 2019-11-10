@@ -62,7 +62,7 @@ InstallMethod(AlgebraicU,
 
               SetCharacteristic(object,Characteristic(sys));
 
-              SetlieAlgebra(object,SimpleLieAlgebra(type(object),rank(object),ring(object)));
+              SetlieAlgebra(object,SimpleLieAlgebraTypeA_G(type(object),rank(object),ring(object)));
               SetrootSystem(object,rootSystem(sys));
               SetpositiveRoots(object,positiveRoots(sys));
               SetallRoots(object,allRoots(sys));

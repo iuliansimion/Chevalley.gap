@@ -12,8 +12,8 @@ InstallMethod(ChevalleyAdj,
               Settype(object,Type);
               Setrank(object,Rank);
 
-              SetlieAlgebra(object,SimpleLieAlgebra(Type,Rank,Ring));
-              SetrootSystem(object,RootSystem(SimpleLieAlgebra(Type,Rank,Integers)));
+              SetlieAlgebra(object,SimpleLieAlgebraTypeA_G(Type,Rank,Ring));
+              SetrootSystem(object,RootSystem(SimpleLieAlgebraTypeA_G(Type,Rank,Integers)));
               SetpositiveRoots(object,positiveRoots(rootSystem(object)));
               SetallRoots(object,Concatenation(
                   positiveRoots(rootSystem(object)),
@@ -51,7 +51,7 @@ InstallMethod(ChevalleyAdj,
               Settype(object,type(sys));
               Setrank(object,rank(sys));
 
-              SetlieAlgebra(object,SimpleLieAlgebra(type(object),rank(object),Ring));
+              SetlieAlgebra(object,SimpleLieAlgebraTypeA_G(type(object),rank(object),Ring));
               SetrootSystem(object,rootSystem(sys));
               SetpositiveRoots(object,positiveRoots(sys));
               SetallRoots(object,allRoots(sys));

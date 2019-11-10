@@ -1,13 +1,13 @@
 #
-# Read("~/Workspace/Chevalley.gap/init.gap"); Read(Filename(home_dir,"load.gap")); Read(Filename(test_dir,"sys.test.gap"));
+# Read("~/Workspace/Chevalley.gap/init.gap"); Read(Filename(home_dir,"load.gap")); Read(Filename(test_dir,"rsys.test.gap"));
 #
-# Read("~/Workspace/Chevalley.gap/init.gap"); Read(Filename(test_dir,"sys.test.init.gap")); Read(Filename(test_dir,"sys.test.gap"));
+# Read("~/Workspace/Chevalley.gap/init.gap"); Read(Filename(test_dir,"rsys.test.init.gap")); Read(Filename(test_dir,"rsys.test.gap"));
 #
-# Read(Filename(test_dir,"sys.test.gap"));
+# Read(Filename(test_dir,"rsys.test.gap"));
 #
 
 sys:=RootSystem("F",4);
-Print("Created root system ",sys,"\n");
+Print("Created RootSystem ",sys,"\n");
 Print("\t[",IsRootSystem(sys)=true,"] IsRootSystem(sys)=true\n");
 
 positiveRootTest:=[ [ 1, 0, 0, 0 ], [ 0, 1, 0, 0 ], [ 0, 0, 1, 0 ], [ 0, 0, 0, 1 ], [ 1, 0, 1, 0 ], [ 0, 1, 0, 1 ], 
