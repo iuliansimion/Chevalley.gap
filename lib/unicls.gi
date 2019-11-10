@@ -183,7 +183,7 @@ InstallMethod(UnipotentClasses,
               SetalgebraicU(object,sys);
               p:=Characteristic(sys);
 
-              dir:=Directory("~/workspace/ChevalleyAdj/lib/data");
+              dir:=data_dir;
               if type(sys) in ["B","C","D","E","F","G"] and p = 2 or
                  type(sys) in ["E","F","G"] and p = 3 or
                  type(sys) = "E" and rank(sys) = 8 and p = 5 then
@@ -212,7 +212,7 @@ InstallMethod(UnipotentClasses,
                   SetWittStructure(object,Witt(Maximum(exps),sys));
               fi;
               
-              SetClasses(object,List([1..Length(file[1])],i->UnipotentClass(#witt_structures[exp[i]],
+              SetAllClasses(object,List([1..Length(file[1])],i->UnipotentClass(#witt_structures[exp[i]],
                   file[3][i],
                   reps[i],
                   file[2][i],
