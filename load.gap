@@ -40,4 +40,4 @@ Read(Filename(home_dir,"lib/unimod.gi"));
 Read(Filename(home_dir,"lib/algU.gi"));
 Read(Filename(home_dir,"lib/witt.gi"));
 Read(Filename(home_dir,"lib/unialg.gi"));
-#Read(Filename(home_dir,"lib/unicls.gi"));
+Read(Filename(home_dir,"lib/unicls.gi"));

@@ -14,13 +14,15 @@ InstallMethod(AlgebraicU,
               Settype(object,Type);
               Setrank(object,Rank);
 
+              SetchevalleyAdj(object,ChevalleyAdj(Type,Rank,Ring));
+
               SetBaseRing(object,Ring);
-              avarnames:=List([1..2*Length(positiveRoots(object))],i->Concatenation("a_{",String(i),"}"));
+              avarnames:=List([1..2*Length(positiveRoots(chevalleyAdj(object)))],i->Concatenation("a_{",String(i),"}"));
               Setring(object,PolynomialRing(Ring,avarnames));
 
               SetCharacteristic(object,Characteristic(Ring));
 
-              SetlieAlgebra(object,SimpleLieAlgebra(Type,Rank,ring(object)));
+              SetlieAlgebra(object,SimpleLieAlgebraTypeA_G(Type,Rank,ring(object)));
               SetrootSystem(object,RootSystem(SimpleLieAlgebra(Type,Rank,Integers)));
               SetpositiveRoots(object,positiveRoots(rootSystem(object)));
               SetallRoots(object,Concatenation(
@@ -33,8 +35,6 @@ InstallMethod(AlgebraicU,
               SetN(object,N_rs(object));
               SetM(object,M_rsi(object));
               SetC(object,C_ijrs(object));
-
-              SetchevalleyAdj(object,ChevalleyAdj(object,Ring));
 
               SetName(object,Concatenation("<simple adjoint ",Type,String(Rank),
                                            " in characteristic ",String(Characteristic(Ring)),">"));

@@ -126,7 +126,7 @@ InstallMethod(Eta,
               roots:=allRoots(sys);
               roots_len:=Length(roots);
 
-              NN:=N(sys);
+              NN:=N_rs(sys);
               
               H:=NullMat(roots_len,roots_len,Integers);
 #              for r in [1..roots_len/2] do
