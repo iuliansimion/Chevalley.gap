@@ -1,8 +1,8 @@
 #
 # usage:
-# Read("~/Workspace/Chevalley.gap/init.gap"); Read(Filename(home_dir,"load.gap")); Read(Filename(g2_dir,"2.G2(A1).gap"));
+# Read("~/Workspace/Chevalley.gap/init.gap"); Read(Filename(home_dir,"load.gap")); Read(Filename(f4_dir,"2.B2(2).gap"));
 #
-# Read(Filename(g2_dir,"2.G2(A1).gap"));
+# Read(Filename(f4_dir,"2.B2(2).gap"));
 #
 
 ITER_POLY_WARN:=false;
@@ -10,11 +10,11 @@ Read(Filename(home_dir,"lib/io.gi"));
 Read(Filename(home_dir,"handle.gap"));
 
 
-sys:=ChevalleyAdj("G",2,GF(2));
+sys:=ChevalleyAdj("F",4,GF(2));
 alg:=AlgebraicU(sys);
 orbs:=UnipotentClasses(alg,"");
 
-orb:=AllClasses(orbs)[2];
+orb:=AllClasses(orbs)[11];
 info:=handleClassShort(orb);
 
 Print("Consider the class ",Label(orb)," in characteristic ",Characteristic(ring(sys)),":\n");
