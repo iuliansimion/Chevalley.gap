@@ -2,20 +2,20 @@
 # usage: (!!!Achtung: This will overwrite all manual modifications)
 #
 # Read("~/Workspace/Chevalley.gap/init.gap"); Read(Filename(home_dir,"load.gap"));
-# Read(Filename(e8_dir_char2,"init_char2.gap")); Read(Filename(e8_dir_char2,"gen_files.gap"));
+# Read(Filename(e8_dir_char5,"init_char5.gap")); Read(Filename(e8_dir_char5,"gen_files.gap"));
 #
 
 for l in labels do
-    f:=Filename(e8_dir_char2,Concatenation(l,".gap"));
+    f:=Filename(e8_dir_char5,Concatenation(l,".gap"));
     #PrintTo(f,l);
     PrintTo(f,"#\n");
     AppendTo(f,"# usage:\n");
     AppendTo(f,"# Read(\"~/Workspace/Chevalley.gap/init.gap\"); Read(Filename(home_dir,\"load.gap\")); ");
-    AppendTo(f,"Read(Filename(e8_dir_char2,\"init_char2.gap\")); Read(Filename(e8_dir_char2,\"");
+    AppendTo(f,"Read(Filename(e8_dir_char5,\"init_char5.gap\")); Read(Filename(e8_dir_char5,\"");
     AppendTo(f,Concatenation(l,".gap"));
     AppendTo(f,"\"));\n");
     AppendTo(f,"#\n");
-    AppendTo(f,"# Read(Filename(e8_dir_char2,\"init_char2.gap\")); Read(Filename(e8_dir_char2,\"");
+    AppendTo(f,"# Read(Filename(e8_dir_char5,\"init_char5.gap\")); Read(Filename(e8_dir_char5,\"");
     AppendTo(f,Concatenation(l,".gap"));
     AppendTo(f,"\"));\n\n");
 

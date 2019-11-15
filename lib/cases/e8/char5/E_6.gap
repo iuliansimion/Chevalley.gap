@@ -1,11 +1,10 @@
 #
 # usage:
-# Read("~/Workspace/Chevalley.gap/init.gap"); Read(Filename(home_dir,"load.gap")); Read(Filename(e8_dir_char2,"init_char2.gap")); Read(Filename(e8_dir_char2,"A1.gap"));
+# Read("~/Workspace/Chevalley.gap/init.gap"); Read(Filename(home_dir,"load.gap")); Read(Filename(e8_dir_char5,"init_char5.gap")); Read(Filename(e8_dir_char5,"E_6.gap"));
 #
-# Read(Filename(e8_dir_char2,"init_char2.gap")); Read(Filename(e8_dir_char2,"A1.gap"));
-#
+# Read(Filename(e8_dir_char5,"init_char5.gap")); Read(Filename(e8_dir_char5,"E_6.gap"));
 
-label:="A_1";
+label:="E_6";
 orb_nr:=Position(labels,label);
 
 orb:=AllClasses(orbs)[orb_nr];
