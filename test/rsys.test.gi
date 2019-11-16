@@ -1,9 +1,9 @@
 #
-# Read("~/Workspace/Chevalley.gap/init.gap"); Read(Filename(home_dir,"load.gap")); Read(Filename(test_dir,"rsys.test.gap"));
+# Read("~/Workspace/Chevalley.gap/init.gi"); Read(Filename(home_dir,"load.gi")); Read(Filename(test_dir,"rsys.test.gi"));
 #
-# Read("~/Workspace/Chevalley.gap/init.gap"); Read(Filename(test_dir,"rsys.test.init.gap")); Read(Filename(test_dir,"rsys.test.gap"));
+# Read("~/Workspace/Chevalley.gap/init.gi"); Read(Filename(test_dir,"rsys.test.init.gi")); Read(Filename(test_dir,"rsys.test.gi"));
 #
-# Read(Filename(test_dir,"rsys.test.gap"));
+# Read(Filename(test_dir,"rsys.test.gi"));
 #
 
 sys:=RootSystem("F",4);

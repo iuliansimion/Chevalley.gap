@@ -2,7 +2,7 @@
 #
 #
 
-Read("~/Workspace/Chevalley.gap/init.gap");
+Read("~/Workspace/Chevalley.gap/init.gi");
 
 Read(Filename(home_dir,"lib/rsys.gd"));
 Read(Filename(home_dir,"lib/rsys.gi"));
@@ -23,15 +23,10 @@ Read(Filename(home_dir,"lib/poly.gd"));
 Read(Filename(home_dir,"lib/poly.gi"));
 
 #
-# UipotentChv needs Descend for Unipotent
-# ... and Unipotent has to be declared before
-#
-# UniAlg needs Witt and UniMod
+# Unialg needed
 #
 Read(Filename(home_dir,"lib/unichv.gd"));
 Read(Filename(home_dir,"lib/witt.gd"));
-Read(Filename(home_dir,"lib/unimod.gd"));
 Read(Filename(home_dir,"lib/unialg.gd"));
 
 Read(Filename(home_dir,"lib/unichv.gi"));
-Read(Filename(home_dir,"lib/unialg.gi"));

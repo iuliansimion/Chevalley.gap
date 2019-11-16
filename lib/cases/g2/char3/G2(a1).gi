@@ -1,16 +1,16 @@
 #
 # usage:
-# Read("~/Workspace/Chevalley.gap/init.gap"); Read(Filename(home_dir,"load.gap")); Read(Filename(g2_dir_char2,"G2(a1).gap"));
+# Read("~/Workspace/Chevalley.gap/init.gi"); Read(Filename(home_dir,"load.gi")); Read(Filename(g2_dir_char3,"G2(a1).gi"));
 #
-# Read(Filename(g2_dir_char2,"G2(a1).gap"));
+# Read(Filename(g2_dir_char3,"G2(a1).gi"));
 #
 
 ITER_POLY_WARN:=false;
 Read(Filename(home_dir,"lib/io.gi"));
-Read(Filename(home_dir,"handle.gap"));
+Read(Filename(home_dir,"handle.gi"));
 
 
-sys:=ChevalleyAdj("G",2,GF(2));
+sys:=ChevalleyAdj("G",2,GF(3));
 alg:=AlgebraicU(sys);
 orbs:=UnipotentClasses(alg,"");
 

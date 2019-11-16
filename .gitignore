@@ -3,5 +3,6 @@
 **/*~
 
 **/*.log
+**/*.sh
 
-init.gap
+init.gi
