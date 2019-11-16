@@ -1,8 +1,8 @@
 #
 # usage:
-# Read("~/Workspace/Chevalley.gap/init.gap"); Read(Filename(home_dir,"load.gap")); Read(Filename(g2_dir,"3.short(A1)(3).gap"));
+# Read("~/Workspace/Chevalley.gap/init.gap"); Read(Filename(home_dir,"load.gap")); Read(Filename(g2_dir_char3,"short(A1)(3).gap"));
 #
-# Read(Filename(g2_dir,"3.short(A1)(3).gap"));
+# Read(Filename(g2_dir_char3,"short(A1)(3).gap"));
 #
 
 ITER_POLY_WARN:=false;
