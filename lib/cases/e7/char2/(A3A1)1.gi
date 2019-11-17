@@ -1,13 +1,13 @@
 #
 # usage:
-# Read("~/Workspace/Chevalley.gap/init.gap"); Read(Filename(home_dir,"load.gap")); Read(Filename(e7_dir_char2,"(A3A1)1.gap"));
+# Read("~/Workspace/Chevalley.gap/init.gi"); Read(Filename(home_dir,"load.gi")); Read(Filename(e7_dir_char2,"(A3A1)1.gi"));
 #
-# Read(Filename(e7_dir_char2,"(A3A1)1.gap"));
+# Read(Filename(e7_dir_char2,"(A3A1)1.gi"));
 #
 
 ITER_POLY_WARN:=false;
 Read(Filename(home_dir,"lib/io.gi"));
-Read(Filename(home_dir,"handle.gap"));
+Read(Filename(home_dir,"handle.gi"));
 
 
 sys:=ChevalleyAdj("E",7,GF(2));

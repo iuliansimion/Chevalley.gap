@@ -1,8 +1,8 @@
 #
 # usage:
-# Read("~/Workspace/Chevalley.gap/init.gap"); Read(Filename(home_dir,"load.gap")); Read(Filename(e7_dir_char3,"init_char3.gap")); Read(Filename(e7_dir_char3,"D5(a1).gap"));
+# Read("~/Workspace/Chevalley.gap/init.gi"); Read(Filename(home_dir,"load.gi")); Read(Filename(e7_dir_char3,"init_char3.gi")); Read(Filename(e7_dir_char3,"D5(a1).gi"));
 #
-# Read(Filename(e7_dir_char3,"init_char3.gap")); Read(Filename(e7_dir_char3,"D5(a1).gap"));
+# Read(Filename(e7_dir_char3,"init_char3.gi")); Read(Filename(e7_dir_char3,"D5(a1).gi"));
 #
 
 label:="D_5(a_1)";
