@@ -22,3 +22,14 @@ Print("\tBorel representative \n\t",coefficients(BorelRep(orb)),"\n");
 Print("\tconnected C_U(u) \n\t",coefficients(info[1]),"\n");
 Print("\tconnected C_U(u) in Levi \n\t",coefficients(info[2]),"\n");
 Print("\tconnected double C_U(u) \n\t",coefficients(info[3]),"\n");
+
+Z0:=info[3];
+
+Print("Component group is C2.\n");
+Print("On Z0:\n");
+a2Z0:=ApplyRootsReflections(Z0,[1]);
+u:=Unipotent(chevalleyAdj(Z0),[[2,-1]]);
+a2Z0:=Conj(a2Z0,u);
+a2Z0:=ConjugateByTorus(a2Z0,2,-1);
+
+Print("\ta2^Z0=",coefficients(a2Z0),"\n");

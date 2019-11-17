@@ -25,11 +25,12 @@ Print("\tconnected double C_U(u) \n\t",coefficients(info[3]),"\n");
 
 Z0:=info[3];
 
+Print("Component group is S3.\n");
 Print("On Z0:\n");
-Print("\ta1=h_1 has weights ",TorusWeights([1],ZZ),"\n");
+Print("\ta1=h_1 has weights ",TorusWeights([1],Z0),"\n");
 
 a2Z0:=ApplyRootsReflections(Z0,[1]);
 u:=Unipotent(chevalleyAdj(Z0),[[2,1]]);
-a2Z0:=Conj(Z0,u);
+a2Z0:=Conj(a2Z0,u);
 
-Print("\ta2^Z0=",coefficients(a2ZZ),"\n");
+Print("\ta2^Z0=",coefficients(a2Z0),"\n");
