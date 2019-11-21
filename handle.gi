@@ -189,6 +189,7 @@ TorusWeights:=function(ts_pow,u)
     sys:=chevalleyAdj(u);
     u_roots:=List(coefficients(u),i->i[1]);
     ts:=Concatenation(List([1..Length(ts_pow)],i->List([1..ts_pow[i]],j->i)));
+    Print(ts);
 
     result:=[];
     for r in u_roots do

@@ -1,0 +1,651 @@
+#
+# cls 67: A_2
+#
+handle67char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[67];
+    info:=infos[67];
+    
+    rep:=Representative(o);
+    #pr[19]=[0,0,1,1,1,0,0,0]
+    #pr[17]=[0,1,1,1,0,0,0,0]
+    #pr[37]=[1,1,1,2,1,0,0,0]
+    tmp1:=ApplyRootsReflections(rep,[19,17,37]);
+    uu:=Unipotent(chevalleyAdj(rep),[[3,1]]);
+    tmp1:=Conj(tmp1,uu);
+    tmp1:=ConjugateByTori(tmp1,[3],[-1]);
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ApplyRootsReflections(cent,[19,17,37]);
+    uu:=Unipotent(chevalleyAdj(cent),[[3,1]]);
+    tmp2:=Conj(tmp2,uu);
+    tmp2:=ConjugateByTori(tmp2,[3],[-1]);
+
+    return [tmp1,tmp2];
+end;
+
+#
+# cls 65: A_2A_1
+#
+handle65char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[65];
+    info:=infos[65];
+    
+    rep:=Representative(o);
+    #pr[53]=[1,1,1,2,1,1,1,0]
+    #pr[52]=[1,1,1,2,2,1,0,0]
+    #pr[93]=[1,2,3,4,3,2,1,0]
+    tmp1:=ApplyRootsReflections(rep,[53,52,93]);
+    uu:=Unipotent(chevalleyAdj(rep),[[1,-1]],Ordering(rep));
+    tmp1:=Conj(tmp1,uu);
+    tmp1:=ConjugateByTori(tmp1,[1],[-1]);
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ApplyRootsReflections(cent,[53,52,93]);
+    uu:=Unipotent(chevalleyAdj(cent),[[1,-1]],Ordering(cent));
+    tmp2:=Conj(tmp2,uu);
+    tmp2:=ConjugateByTori(tmp2,[1],[-1]);
+
+    return [tmp1,tmp2];
+end;
+
+#
+# cls 61: A_2^2
+#
+handle61char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[61];
+    info:=infos[61];
+    
+    rep:=Representative(o);
+    #pr[43]=[0,0,1,1,1,1,1,1]
+    #pr[41]=[0,1,1,1,1,1,1,0]
+    #pr[79]=[1,1,1,2,2,2,2,1]
+    tmp1:=ApplyRootsReflections(rep,[43,41,79]);
+    uu:=Unipotent(chevalleyAdj(rep),[[1,1]],Ordering(rep));
+    tmp1:=Conj(tmp1,uu);
+    tmp1:=ConjugateByTori(tmp1,[3],[-1]);
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ApplyRootsReflections(cent,[43,41,79]);
+    uu:=Unipotent(chevalleyAdj(cent),[[1,1]],Ordering(cent));
+    tmp2:=Conj(tmp2,uu);
+    tmp2:=ConjugateByTori(tmp2,[3],[-1]);
+
+    return [tmp1,tmp2];
+end;
+
+
+#
+# cls 58: D_4(a_1)
+#
+handle58char3:=function(orbs,infos)
+    local tmp1,tmp2,tmp3,tmp4,o,info,rep,cent,uu;
+    o:=Classes(orbs)[58];
+    info:=infos[58];
+    
+    rep:=Representative(o);
+    #pr[4] =[0,0,0,1,0,0,0,0]
+    #pr[51]=[1,1,2,2,1,1,0,0]
+    #pr[52]=[1,1,1,2,2,1,0,0]
+    tmp1:=ApplyRootsReflections(rep,[4,51,52]);
+    uu:=Unipotent(chevalleyAdj(rep),[[3,-1],[5,1]],Ordering(rep));
+    tmp1:=Conj(tmp1,uu);
+    tmp1:=ConjugateByTori(tmp1,[4,1,2,6],[-1,-1,-1,-1]);
+
+    #pr[26]=[0,1,0,1,1,1,0,0]
+    #pr[27]=[0,0,1,1,1,1,0,0]
+    tmp3:=ApplyRootsReflections(rep,[26,27]);
+    uu:=Unipotent(chevalleyAdj(rep),[[3,1],[4,1],[5,-1],[11,1],[12,-1]],Ordering(rep));
+    tmp3:=Conj(tmp3,uu);
+    tmp3:=ConjugateByTori(tmp3,[2,4],[-1,-1,-1,-1]);
+    
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ApplyRootsReflections(cent,[4,51,52]);
+    uu:=Unipotent(chevalleyAdj(cent),[[3,-1],[5,1]],Ordering(cent));
+    tmp2:=Conj(tmp2,uu);
+    tmp2:=ConjugateByTori(tmp2,[4,1,2,6],[-1,-1,-1,-1]);
+
+    #tmp4:=0;
+    tmp4:=ApplyRootsReflections(cent,[26,27]);
+    uu:=Unipotent(chevalleyAdj(cent),[[3,1],[4,1],[5,-1],[11,1],[12,-1]],Ordering(cent));
+    tmp4:=Conj(tmp4,uu);
+    tmp4:=ConjugateByTori(tmp4,[2,4],[-1,-1,-1,-1]);
+    
+    return [tmp1,tmp3,tmp2,tmp4];
+end;
+
+
+#
+# NOT FINISHED .. Should be an S_3
+#
+# cls 54: D_4(a_1)A_1 ([2,5,9,10,7] in E_7) [2,5,10,11,7] in E_8
+#
+handle54char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[54];
+    #info:=infos[54];
+    
+    rep:=Representative(o);
+
+    #pr[23]=[1,1,1,1,0,0,0,0]
+    #pr[24]=[1,0,1,1,1,0,0,0]
+    tmp1:=ApplyRootsReflections(rep,[23,24]);
+    #uu:=Unipotent(chevalleyAdj(rep),[[4,1],[12,1]],Ordering(rep)); E_7
+    #tmp1:=Conj(tmp1,uu); E_7
+    #tmp1:=ConjugateByTori(tmp1,[1,2],[-1,-1,-1,-1]); E_7
+    tmp1:=ConjugateByTori(tmp1,[2],[-1,-1,-1,-1]);
+
+    tmp2:=0;
+    #cent:=FromPositiveBorel(o,info[2]);
+    #tmp2:=ApplyRootsReflections(cent,[23,24]);
+    #uu:=Unipotent(chevalleyAdj(cent),[[4,1],[11,1]],Ordering(cent)); E_7
+    #tmp2:=Conj(tmp2,uu); E_7
+    #tmp2:=ConjugateByTori(tmp2,[1,2],[-1,-1,-1,-1]); E_7
+    #tmp2:=ConjugateByTori(tmp2,[2],[-1,-1,-1,-1]);
+    
+    return [tmp1,tmp2];
+end;
+
+
+#
+# cls 53: A_3A_2 [3,4,2,6,7] (not finished - check it)
+#
+handle53char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[53];
+    info:=infos[53];
+    
+    rep:=Representative(o);
+
+    #pr[26]=[0,1,0,1,1,1,0,0]
+    #pr[27]=[0,0,1,1,1,1,0,0]
+    #pr[55]=[0,1,1,2,2,1,1,0]
+    tmp1:=ApplyRootsReflections(rep,[26,27,55]);
+    uu:=Unipotent(chevalleyAdj(rep),[[2,-1],[3,1],[6,-1]],Ordering(rep));
+    tmp1:=Conj(tmp1,uu);
+    tmp1:=ConjugateByTori(tmp1,[4,6],[-1,-1]);
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ApplyRootsReflections(cent,[26,27,55]);
+    uu:=Unipotent(chevalleyAdj(cent),[[2,-1],[3,1],[6,-1]],Ordering(cent)); #???
+    tmp2:=Conj(tmp2,uu);
+    tmp2:=ConjugateByTori(tmp2,[4,6],[-1,-1]);
+    
+    return [tmp1,tmp2];
+end;
+
+
+#
+# cls 52: A_4 [1,2,3,4]
+#
+handle52char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[52];
+    info:=infos[52];
+    
+    rep:=Representative(o);
+
+    #pr[33]=[0,1,1,1,1,1,0,0]
+    #pr[31]=[1,0,1,1,1,1,0,0]
+    #pr[64]=[1,1,2,2,2,1,1,0]
+    #pr[89]=[1,2,2,4,3,2,1,0]
+    tmp1:=ApplyRootsReflections(rep,[33,31,64,89]);
+    uu:=Unipotent(chevalleyAdj(rep),[[2,-1],[4,-1]],Ordering(rep));
+    tmp1:=Conj(tmp1,uu);
+    tmp1:=ConjugateByTori(tmp1,[1,3,4],[-1,-1,-1,-1]);
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ApplyRootsReflections(cent,[33,31,64,89]);
+    uu:=Unipotent(chevalleyAdj(cent),[[2,-1],[4,-1]],Ordering(cent));
+    tmp2:=Conj(tmp2,uu);
+    tmp2:=ConjugateByTori(tmp2,[1,3,4],[-1,-1,-1,-1]);
+    
+    return [tmp1,tmp2];
+end;
+
+#
+# cls 49: D_4(a_1)A_2 [2,5,10,11,7,8] in E_8  (NOT FINISHED)
+#
+handle49char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[49];
+    #info:=infos[49];
+    
+    rep:=Representative(o);
+
+    #pr[23]=[1,1,1,1,0,0,0,0]  asta merge si cu rep=[2,3,10,12,7,8] urmat de ConjNegUa(tmp1,4,1)
+    #pr[24]=[1,0,1,1,1,0,0,0]
+    tmp1:=ApplyRootsReflections(rep,[23,24]);
+    #uu:=Unipotent(chevalleyAdj(rep),[[4,1],[12,1]],Ordering(rep)); E_7
+    #tmp1:=Conj(tmp1,uu); E_7
+    #tmp1:=ConjugateByTori(tmp1,[1,2],[-1,-1,-1,-1]); E_7
+    tmp1:=ConjugateByTori(tmp1,[2],[-1,-1,-1,-1]);
+
+    tmp2:=0;
+    #cent:=FromPositiveBorel(o,info[2]);
+    #tmp2:=ApplyRootsReflections(cent,[23,24]);
+    #uu:=Unipotent(chevalleyAdj(cent),[[4,1],[11,1]],Ordering(cent)); E_7
+    #tmp2:=Conj(tmp2,uu); E_7
+    #tmp2:=ConjugateByTori(tmp2,[1,2],[-1,-1,-1,-1]); E_7
+    #tmp2:=ConjugateByTori(tmp2,[2],[-1,-1,-1,-1]);
+    
+    return [tmp1,tmp2];
+end;
+
+#
+# cls 48: A_4A_1 
+#
+handle48char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[48];
+    info:=infos[48];
+
+    rep:=Representative(o);
+
+    #pr[41]=[0,1,1,1,1,1,1,0]
+    #pr[39]=[1,0,1,1,1,1,1,0]
+    #pr[57]=[1,1,2,2,2,1,0,0]
+    #pr[89]=[1,2,2,4,3,2,1,0]
+    tmp1:=ApplyRootsReflections(rep,[41,39,57,89]);
+    uu:=Unipotent(chevalleyAdj(rep),[[2,-1],[4,1]],Ordering(rep));
+    tmp1:=Conj(tmp1,uu);
+    tmp1:=ConjugateByTori(tmp1,[2,3,4],[-1,-1,-1,-1]);
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ApplyRootsReflections(cent,[41,39,57,89]);
+    uu:=Unipotent(chevalleyAdj(cent),[[2,-1],[4,1]],Ordering(cent));
+    tmp2:=Conj(tmp2,uu);
+    tmp2:=ConjugateByTori(tmp2,[2,3,4],[-1,-1,-1,-1]);
+    
+    return [tmp1,tmp2];
+end;
+
+#
+# cls 46: D_5(a_1) (not finished)? cred ca e gata
+#
+handle46char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[46];
+    info:=infos[46];
+    
+    rep:=Representative(o);
+
+    #pr[82]=[1,1,2,3,3,2,1,0]
+    #pr[80]=[1,2,2,3,2,2,1,0]
+    tmp1:=ApplyRootsReflections(rep,[82,80]);
+    uu:=Unipotent(chevalleyAdj(rep),[[4,1],[12,1]],Ordering(rep));
+    tmp1:=Conj(tmp1,uu);
+    tmp1:=ConjugateByTori(tmp1,[2,4],[-1,-1,-1,-1]);
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ApplyRootsReflections(cent,[82,80]);
+    uu:=Unipotent(chevalleyAdj(cent),[[4,1],[12,1]],Ordering(cent));
+    tmp2:=Conj(tmp2,uu);
+    tmp2:=ConjugateByTori(tmp2,[2,4],[-1,-1,-1,-1]);
+    
+    return [tmp1,tmp2];
+end;
+
+
+#
+# cls 45: A_4A_1^2 
+#
+handle45char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[45];
+    info:=infos[45];
+
+    rep:=Representative(o);
+
+    #pr[71]=[1,1,2,2,2,2,1,0]
+    #pr[72]=[1,1,2,2,2,1,1,1]
+    #pr[112]=[1,3,3,5,4,3,2,1]
+    #pr[111]=[2,2,3,5,4,3,2,1]
+    tmp1:=ApplyRootsReflections(rep,[71,72,112,111]);
+    uu:=Unipotent(chevalleyAdj(rep),[[1,1],[2,1],[3,-1],[9,1]],Ordering(rep));
+    tmp1:=Conj(tmp1,uu);
+    tmp1:=ConjugateByTori(tmp1,[5,8],[-1,aaa]);
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ApplyRootsReflections(cent,[71,72,112,111]);
+    uu:=Unipotent(chevalleyAdj(cent),[[1,1],[2,1],[3,-1],[9,1]],Ordering(cent));
+    tmp2:=Conj(tmp2,uu);
+    tmp2:=ConjugateByTori(tmp2,[5,8],[-1,aaa]);
+    
+    return [tmp1,tmp2];
+end;
+
+#
+# cls 40: D_4A_2 
+#
+handle40char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[40];
+    info:=infos[40];
+
+    rep:=Representative(o);
+
+    #pr[34]=[0,1,0,1,1,1,1,0]
+    #pr[35]=[0,0,1,1,1,1,1,0]
+    #pr[68]=[0,1,1,2,2,2,1,1]
+    tmp1:=ApplyRootsReflections(rep,[34,35,68]);
+    uu:=Unipotent(chevalleyAdj(rep),[[8,-1]],Ordering(rep));
+    tmp1:=Conj(tmp1,uu);
+    tmp1:=ConjugateByTori(tmp1,[4,6,7,8],[-1,-1,-1,-1]);
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ApplyRootsReflections(cent,[34,35,68]);
+    uu:=Unipotent(chevalleyAdj(cent),[[8,-1]],Ordering(cent));
+    tmp2:=Conj(tmp2,uu);
+    tmp2:=ConjugateByTori(tmp2,[4,6,7,8],[-1,-1,-1,-1]);
+    
+    return [tmp1,tmp2];
+end;
+
+
+#
+# cls 39: E_6(a_3) [1,4,6,17,18,19] this doesn't work in char2 
+#
+handle39char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent;
+    o:=Classes(orbs)[39];
+    info:=infos[39];
+    
+    rep:=Representative(o);
+    tmp1:=ConjugateByTorus(rep,4,-1);# h_1 --> h_4
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ConjugateByTorus(cent,4,-1);# h_1 --> h_4
+    
+    return [tmp1,tmp2];
+end;
+
+#
+# cls 34: D_6(a_2) 
+#
+handle34char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[34];
+    info:=infos[34];
+
+    rep:=Representative(o);
+
+    #pr[42]=[0,1,0,1,1,1,1,0]
+    #pr[43]=[0,0,1,1,1,1,1,0]
+    tmp1:=ApplyRootsReflections(rep,[42,43]);
+    uu:=Unipotent(chevalleyAdj(rep),[[4,1],[6,1],[10,1],[13,1]],Ordering(rep));
+    tmp1:=Conj(tmp1,uu);
+    tmp1:=ConjugateByTori(tmp1,[4,5,8],[-1,-1,-1,-1]);
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ApplyRootsReflections(cent,[42,43]);
+    uu:=Unipotent(chevalleyAdj(cent),[[4,1],[6,1],[10,1],[13,1]],Ordering(cent));
+    tmp2:=Conj(tmp2,uu);
+    tmp2:=ConjugateByTori(tmp2,[4,5,8],[-1,-1,-1,-1]);
+    
+    return [tmp1,tmp2];
+end;
+
+#
+# cls 33: E_6(a_3)A_1 [1,4,6,8,17,18,19] this doesn't work in char2 
+#
+handle33char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent;
+    o:=Classes(orbs)[33];
+    info:=infos[33];
+    
+    rep:=Representative(o);
+    tmp1:=ConjugateByTorus(rep,4,-1);# h_1 --> h_4
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ConjugateByTorus(cent,4,-1);# h_1 --> h_4
+    
+    return [tmp1,tmp2];
+end;
+
+#
+# cls 28: D_6(a_1) 
+#
+handle28char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[28];
+    info:=infos[28];
+
+    rep:=Representative(o);
+
+    #pr[42]=[0,1,0,1,1,1,1,0]
+    #pr[43]=[0,0,1,1,1,1,1,0]
+    tmp1:=ApplyRootsReflections(rep,[42,43]);
+    uu:=Unipotent(chevalleyAdj(rep),[[4,1],[11,1]],Ordering(rep));
+    tmp1:=Conj(tmp1,uu);
+    tmp1:=ConjugateByTori(tmp1,[3,4],[-1,-1,-1,-1]);
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ApplyRootsReflections(cent,[42,43]);
+    uu:=Unipotent(chevalleyAdj(cent),[[4,1],[11,1]],Ordering(cent));
+    tmp2:=Conj(tmp2,uu);
+    tmp2:=ConjugateByTori(tmp2,[3,4],[-1,-1,-1,-1]);
+    
+    return [tmp1,tmp2];
+end;
+
+#
+# cls 26: E_7(a_4) [1,4,7,14,17,18,19,26] this doesn't work in char2 
+#
+handle26char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent;
+    o:=Classes(orbs)[26];
+    info:=infos[26];
+    
+    rep:=Representative(o);
+    tmp1:=ConjugateByTorus(rep,4,-1);# h_1 --> h_4
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ConjugateByTorus(cent,4,-1);# h_1 --> h_4
+    
+    return [tmp1,tmp2];
+end;
+
+#
+# cls 25: E_6(a_1) (not finished)
+#
+handle6char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[6];
+    info:=infos[6];
+
+    #pr[47]=[1,1,2,2,1,1,1]
+    #pr[48]=[1,1,1,2,2,1,1]
+    #pr[49]=[0,1,1,2,2,2,1]
+
+    rep:=Representative(o);
+    rep:=Unipotent(alg,coefficients(rep),[1..Length(pr)]);#ordered rep
+    tmp1:=ApplyRootsReflections(rep,[47,48,49]);
+    tmp1:=ConjNegUa(tmp1,4,-1);
+    uu:=Unipotent(chevalleyAdj(rep),[[1,1],[8,1],[6,-1]],Ordering(rep));# this works for orderd rep
+    tmp1:=Conj(tmp1,uu);
+    tmp1:=ConjugateByTori(tmp1,[3,7],[-1,-1]);
+    tmp1:=Unipotent(chevalleyAdj(rep),coefficients(tmp1),Ordering(Representative(o)));
+    
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ApplyRootsReflections(cent,[47,48,49]);
+    tmp2:=ConjNegUa(tmp2,4,1);
+    #tmp2:=ConjugateByTorus(cent,4,-1);# h_1 --> h_4
+    
+    return [tmp1,tmp2];
+end;
+
+#
+# cls 24: D_5A_2 
+#
+handle24char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[24];
+    info:=infos[24];
+
+    rep:=Representative(o);
+
+    #pr[87]=[1,1,2,3,3,2,1,1]
+    #pr[86]=[1,2,2,3,2,2,1,1]
+    #pr[119]=[2,3,4,6,5,4,3,1]
+    tmp1:=ApplyRootsReflections(rep,[87,86,119]);
+    uu:=Unipotent(chevalleyAdj(rep),[[8,-1]],Ordering(rep));
+    tmp1:=Conj(tmp1,uu);
+    tmp1:=ConjugateByTori(tmp1,[1,4,7],[-1,-1,-1,-1,-1]);
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ApplyRootsReflections(cent,[87,86,119]);
+    uu:=Unipotent(chevalleyAdj(cent),[[8,-1]],Ordering(cent));
+    tmp2:=Conj(tmp2,uu);
+    tmp2:=ConjugateByTori(tmp2,[1,4,7],[-1,-1,-1,-1]);
+    
+    return [tmp1,tmp2];
+end;
+
+#
+# cls 21: D_7(a_2) (NOT FINISHED)
+#
+handle21char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[21];
+    #info:=infos[21];
+
+    rep:=Representative(o);
+
+    #pr[113]=[2,3,3,5,4,3,2,1]
+    #pr[114]=[0,0,1,1,1,1,1,0]
+    tmp1:=ApplyRootsReflections(rep,[113,114]);
+    #uu:=Unipotent(chevalleyAdj(rep),[[4,1],[6,1],[10,1],[13,1]],Ordering(rep));
+    #tmp1:=Conj(tmp1,uu);
+    #tmp1:=ConjugateByTori(tmp1,[4,5,8],[-1,-1,-1,-1]);
+
+    tmp2:=0;
+    #cent:=FromPositiveBorel(o,info[2]);
+    #tmp2:=ApplyRootsReflections(cent,[36,34,46,61]);
+    #uu:=Unipotent(chevalleyAdj(cent),[[2,-1],[4,1]],Ordering(cent));
+    #tmp2:=Conj(tmp2,uu);
+    #tmp2:=ConjugateByTori(tmp2,[2,3,4],[-1,-1,-1,-1]);
+    
+    return [tmp1,tmp2];
+end;
+
+
+#
+# cls 17: E_7(a_3) ([1,4,6,7,15,16,17] in E_7) [1,4,6,7,17,18,19] in E_8 this doesn't work in char2 
+#
+handle17char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent;
+    o:=Classes(orbs)[17];
+    info:=infos[17];
+    
+    rep:=Representative(o);
+    tmp1:=ConjugateByTorus(rep,4,-1);# h_1 --> h_4
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ConjugateByTorus(cent,4,-1);# h_1 --> h_4
+    
+    return [tmp1,tmp2];
+end;
+
+
+#
+# cls 15: D_7(a_1)
+#
+handle15char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent,uu;
+    o:=Classes(orbs)[15];
+    info:=infos[15];
+
+    rep:=Representative(o);
+
+    #pr[113]=[2,3,3,5,4,3,2,1]
+    #pr[114]=[0,0,1,1,1,1,1,0]
+    tmp1:=ApplyRootsReflections(rep,[113,114]);
+    #uu:=Unipotent(chevalleyAdj(rep),[[4,1],[10,-1]],Ordering(rep)); si asta merge
+    uu:=Unipotent(chevalleyAdj(rep),[[4,1],[11,-1]],Ordering(rep));
+    tmp1:=Conj(tmp1,uu);
+    tmp1:=ConjugateByTori(tmp1,[2,3,4],[aaa,aaa,-1]);
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ApplyRootsReflections(cent,[113,114]);
+    uu:=Unipotent(chevalleyAdj(cent),[[4,1],[11,-1]],Ordering(cent));
+    tmp2:=Conj(tmp2,uu);
+    tmp2:=ConjugateByTori(tmp2,[2,3,4],[aaa,aaa,-1,-1]);
+    
+    return [tmp1,tmp2];
+end;
+
+#
+# cls 7: E_8(b_4) [1,4,7,8,14,17,19,26]  this doesn't work in char2 
+#
+handle7char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent;
+    o:=Classes(orbs)[7];
+    info:=infos[7];
+    
+    rep:=Representative(o);
+    tmp1:=ConjugateByTorus(rep,4,-1);# h_1 --> h_4
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ConjugateByTorus(cent,4,-1);# h_1 --> h_4
+    
+    return [tmp1,tmp2];
+end;
+
+#
+# cls 5: E_8(a_4) [1,4,6,8,17,18,19,21]  this doesn't work in char2 
+#
+handle5char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent;
+    o:=Classes(orbs)[5];
+    info:=infos[5];
+    
+    rep:=Representative(o);
+    tmp1:=ConjugateByTori(rep,[4,8],[-1,-1]);# h_4, h_8
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ConjugateByTori(cent,[4,8],[-1,-1]); # h_4, h_8
+    
+    return [tmp1,tmp2];
+end;
+
+#
+# cls 4: E_8(a_3) [1,4,6,7,8,17,18,19]  this doesn't work in char2 
+#
+handle4char3:=function(orbs,infos)
+    local tmp1,tmp2,o,info,rep,cent;
+    o:=Classes(orbs)[4];
+    info:=infos[4];
+    
+    rep:=Representative(o);
+    tmp1:=ConjugateByTorus(rep,4,-1);# h_1 --> h_4
+
+    #tmp2:=0;
+    cent:=FromPositiveBorel(o,info[2]);
+    tmp2:=ConjugateByTorus(cent,4,-1);# h_1 --> h_4
+    
+    return [tmp1,tmp2];
+end;
