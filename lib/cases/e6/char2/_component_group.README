@@ -1,0 +1,9 @@
+char 2
+
+A2      C_2         DONE
+D4(a1)  S_3         DONE
+E6(a3)  C_2         DONE
+E6      C_4 = <u>
+
+
+The handle methods are in /lib/components/E6char2.gi

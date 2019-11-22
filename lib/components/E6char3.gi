@@ -1,9 +1,9 @@
 #
 # cls 17: A_2
 #
-handle17char3:=function(orbs,infos)
+handle17char3:=function()
     local tmp1,tmp2,o,info,rep,cent,uu;
-    o:=Classes(orbs)[17];
+    o:=AllClasses(orbs)[17];
     info:=infos[17];
     
     rep:=Representative(o);
@@ -28,9 +28,9 @@ end;
 #
 # cls 10: D_4(a_1)
 #
-handle10char3:=function(orbs,infos)
+handle10char3:=function()
     local tmp1,tmp2,tmp3,tmp4,o,info,rep,cent,uu;
-    o:=Classes(orbs)[10];
+    o:=AllClasses(orbs)[10];
     info:=infos[10];
     
     rep:=Representative(o);
@@ -68,9 +68,9 @@ end;
 #
 # cls 4: E_6(a_3) [13,1,15,6,14,4] 
 #
-handle4char3:=function(orbs,infos)
+handle4char3:=function()
     local tmp1,tmp2,o,info,rep,cent;
-    o:=Classes(orbs)[4];
+    o:=AllClasses(orbs)[4];
     info:=infos[4];
     
     rep:=Representative(o);

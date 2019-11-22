@@ -17,6 +17,7 @@ info:=infos[orb_nr];
 # ------------------------------------------------------------------------
 #
 
+
 Print("Consider the class ",Label(orb)," in characteristic ",Characteristic(ring(sys)),":\n");
 Print("\tBorel representative \n\t",coefficients(BorelRep(orb)),"\n");
 Print("\tconnected C_U(u) \n\t",coefficients(info[1]),"\n");
