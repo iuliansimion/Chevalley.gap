@@ -1,21 +1,22 @@
 #
 # usage:
-# Read("~/Workspace/Chevalley.gap/init.gi"); Read(Filename(home_dir,"load.gi")); Read(Filename(f4_dir_char3,"A1.gi"));
+# Read("~/Workspace/Chevalley.gap/init.gi"); Read(Filename(home_dir,"load.gi")); Read(Filename(f4_dir_char3,"_init_char3.gi")); Read(Filename(f4_dir_char3,"A1.gi"));
 #
 # Read(Filename(f4_dir_char3,"A1.gi"));
 #
 
-ITER_POLY_WARN:=false;
-Read(Filename(home_dir,"lib/io.gi"));
-Read(Filename(home_dir,"handle.gi"));
+
+label:="A_1";
+orb_nr:=Position(labels,label);
+#orb:=AllClasses(orbs)[15];
+orb:=AllClasses(orbs)[orb_nr];
+info:=infos[orb_nr];
 
 
-sys:=ChevalleyAdj("F",4,GF(3));
-alg:=AlgebraicU(sys);
-orbs:=UnipotentClasses(alg,"");
+#
+# ------------------------------------------------------------------------
+#
 
-orb:=AllClasses(orbs)[15];
-info:=handleClassShort(orb);
 
 Print("---\n");
 Print("Consider the class ",Label(orb)," in characteristic ",Characteristic(ring(sys)),":\n");

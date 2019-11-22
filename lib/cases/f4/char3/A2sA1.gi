@@ -1,21 +1,22 @@
 #
 # usage:
-# Read("~/Workspace/Chevalley.gap/init.gi"); Read(Filename(home_dir,"load.gi")); Read(Filename(f4_dir_char3,"A2sA1.gi"));
+# Read("~/Workspace/Chevalley.gap/init.gi"); Read(Filename(home_dir,"load.gi")); Read(Filename(f4_dir_char3,"_init_char3.gi")); Read(Filename(f4_dir_char3,"A2sA1.gi"));
 #
 # Read(Filename(f4_dir_char3,"A2sA1.gi"));
 #
 
-ITER_POLY_WARN:=false;
-Read(Filename(home_dir,"lib/io.gi"));
-Read(Filename(home_dir,"handle.gi"));
+
+label:="A_2\\tilde A_1";
+orb_nr:=Position(labels,label);
+#orb:=AllClasses(orbs)[10];
+orb:=AllClasses(orbs)[orb_nr];
+info:=infos[orb_nr];
 
 
-sys:=ChevalleyAdj("F",4,GF(3));
-alg:=AlgebraicU(sys);
-orbs:=UnipotentClasses(alg,"");
+#
+# ------------------------------------------------------------------------
+#
 
-orb:=AllClasses(orbs)[10];
-info:=handleClassShort(orb);
 
 Print("Consider the class ",Label(orb)," in characteristic ",Characteristic(ring(sys)),":\n");
 Print("\tBorel representative \n\t",coefficients(BorelRep(orb)),"\n");

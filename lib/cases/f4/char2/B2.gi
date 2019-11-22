@@ -40,11 +40,12 @@ aZ0:=ApplyRootsReflections(Z0,n);
 Print("\ta^Z0=",coefficients(aZ0),"\n");
 Print("\tOne can also choose the representative of the class as component group representative\n");
 
+
 #
 # ------------------------------------------------------------------------
 #
 
 tmp:=handle12char2();
-Print("\nComponent group is C2.\n");
-Print("\ta^u= \n",coefficients(BorelRep(orb)),"\n");
-Print("\ta^Z0= \n",coefficients(info[1]),"\n");
+Print("\nComponent group check:\n");
+Print("\ta^u= \n",coefficients(tmp[1]),"\n");
+Print("\tconnected center= \n",coefficients(tmp[2]),"\n");

@@ -1,21 +1,22 @@
 #
 # usage:
-# Read("~/Workspace/Chevalley.gap/init.gi"); Read(Filename(home_dir,"load.gi")); Read(Filename(f4_dir_char3,"B2.gi"));
+# Read("~/Workspace/Chevalley.gap/init.gi"); Read(Filename(home_dir,"load.gi")); Read(Filename(f4_dir_char3,"_init_char3.gi")); Read(Filename(f4_dir_char3,"B2.gi"));
 #
 # Read(Filename(f4_dir_char3,"B2.gi"));
 #
 
-ITER_POLY_WARN:=false;
-Read(Filename(home_dir,"lib/io.gi"));
-Read(Filename(home_dir,"handle.gi"));
+
+label:="B_2";
+orb_nr:=Position(labels,label);
+#orb:=AllClasses(orbs)[9];
+orb:=AllClasses(orbs)[orb_nr];
+info:=infos[orb_nr];
 
 
-sys:=ChevalleyAdj("F",4,GF(3));
-alg:=AlgebraicU(sys);
-orbs:=UnipotentClasses(alg,"");
+#
+# ------------------------------------------------------------------------
+#
 
-orb:=AllClasses(orbs)[9];
-info:=handleClassShort(orb);
 
 Print("Consider the class ",Label(orb)," in characteristic ",Characteristic(ring(sys)),":\n");
 Print("\tBorel representative \n\t",coefficients(BorelRep(orb)),"\n");
@@ -37,3 +38,14 @@ aZ0:=ApplyRootsReflections(Z0,n);
 aZ0:=ConjugateByTorus(aZ0,4,-1);
 
 Print("\ta^Z0=",coefficients(aZ0),"\n");
+
+
+#
+# ------------------------------------------------------------------------
+#
+
+
+tmp:=handle9char3();
+Print("\nComponent group is check:\n");
+Print("\ta^u= \n",coefficients(tmp[1]),"\n");
+Print("\tconnected center= \n",coefficients(tmp[2]),"\n");

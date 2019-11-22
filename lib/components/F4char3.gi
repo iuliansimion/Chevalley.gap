@@ -1,9 +1,9 @@
 #
 # cls 14: \tilde A_1
 #
-handle14char3:=function(orbs,infos)
+handle14char3:=function()
     local tmp1,tmp2,o,info,rep,cent;
-    o:=Classes(orbs)[14];
+    o:=AllClasses(orbs)[14];
     info:=infos[14];
     
     rep:=Representative(o);
@@ -20,9 +20,9 @@ end;
 #
 # cls 12: A_2
 #
-handle12char3:=function(orbs,infos)
+handle12char3:=function()
     local tmp1,tmp2,o,info,rep,cent,u;
-    o:=Classes(orbs)[12];
+    o:=AllClasses(orbs)[12];
     info:=infos[12];
     
     rep:=Representative(o);
@@ -45,9 +45,9 @@ end;
 #
 # cls 9: B_2
 #
-handle9char3:=function(orbs,infos)
+handle9char3:=function()
     local tmp1,tmp2,o,info,rep,cent;
-    o:=Classes(orbs)[9];
+    o:=AllClasses(orbs)[9];
     info:=infos[9];
     
     rep:=Representative(o);
@@ -65,9 +65,9 @@ end;
 #
 # cls 7: C_3(a_1)
 #
-handle7char3:=function(orbs,infos)
+handle7char3:=function()
     local tmp1,tmp2,o,info,rep,cent;
-    o:=Classes(orbs)[7];
+    o:=AllClasses(orbs)[7];
     info:=infos[7];
     
     rep:=Representative(o);
@@ -80,9 +80,9 @@ end;
 #
 # cls 6: F_4(a_3) [4,6,10,18] (finished?)
 #
-handle6char3:=function(orbs,infos)
+handle6char3:=function()
     local tmp1,tmp2,tmp3,tmp4,tmp5,tmp6,o,info,rep,cent,uu;
-    o:=Classes(orbs)[6];
+    o:=AllClasses(orbs)[6];
     info:=infos[6];
     
     rep:=Representative(o);
@@ -129,9 +129,9 @@ end;
 #
 # cls 3: F_4(a_2) (not finished)
 #
-handle3char3:=function(orbs,infos)
+handle3char3:=function()
     local tmp1,tmp2,o,info,rep,cent;
-    o:=Classes(orbs)[3];
+    o:=AllClasses(orbs)[3];
     info:=infos[3];
     
     rep:=Representative(o);
@@ -145,9 +145,9 @@ end;
 #
 # cls 2: F_4(a_1)
 #
-handle2char3:=function(orbs,infos)
+handle2char3:=function()
     local tmp1,tmp2,o,info,rep,cent,uu;
-    o:=Classes(orbs)[2];
+    o:=AllClasses(orbs)[2];
     info:=infos[2];
     
     rep:=Representative(o);

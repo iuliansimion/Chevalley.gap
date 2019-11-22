@@ -31,6 +31,6 @@ Print("\tconnected double C_U(u) \n\t",coefficients(info[3]),"\n");
 
 
 tmp:=handle3char2();
-Print("\nComponent group is C2.\n");
-Print("\ta^u= \n",coefficients(BorelRep(orb)),"\n");
-Print("\ta^Z0= \n",coefficients(info[1]),"\n");
+Print("\nComponent group check:\n");
+Print("\ta^u= \n",coefficients(tmp[1]),"\n");
+Print("\tconnected center= \n",coefficients(tmp[2]),"\n");

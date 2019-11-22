@@ -1,10 +1,13 @@
 char 3
 
-sA1     C_2
-A2      C_2
-B2      C_2
-C3(a1)  C_2
-F4(a3)  S_4
-F4(a2)  C_2
-F4(a1)  C_2
+sA1     C_2         DONE
+A2      C_2         DONE
+B2      C_2         DONE
+C3(a1)  C_2         DONE
+F4(a3)  S_4         DONE
+F4(a2)  C_2         DONE
+F4(a1)  C_2         DONE
 F4      C_4 = <u> ?
+
+
+The handle methods are in /lib/components/F4char3.gi
