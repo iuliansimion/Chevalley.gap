@@ -5,6 +5,7 @@
 # Read(Filename(e6_dir_char2,"E6(a1).gi"));
 #
 
+
 label:="E_6(a_1)";
 orb_nr:=Position(labels,label);
 #orb:=AllClasses(orbs)[2];
