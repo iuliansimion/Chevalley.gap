@@ -1,9 +1,9 @@
 #
 # cls 15: A_2
 #
-handle15char2:=function(orbs,infos)
+handle15char2:=function()
     local tmp1,tmp2,o,info,rep,cent,u;
-    o:=Classes(orbs)[15];
+    o:=AllClasses(orbs)[15];
     info:=infos[15];
     
     rep:=Representative(o);
@@ -23,9 +23,9 @@ end;
 #
 # cls 14: \tilde A_2
 #
-handle14char2:=function(orbs,infos)
+handle14char2:=function()
     local tmp1,tmp2,o,info,rep,cent,u;
-    o:=Classes(orbs)[14];
+    o:=AllClasses(orbs)[14];
     info:=infos[14];
     
     rep:=Representative(o);
@@ -48,9 +48,9 @@ end;
 #
 # cls 12: B_2
 #
-handle12char2:=function(orbs,infos)
+handle12char2:=function()
     local tmp1,tmp2,o,info,rep,cent;
-    o:=Classes(orbs)[12];
+    o:=AllClasses(orbs)[12];
     info:=infos[12];
     
     rep:=Representative(o);
@@ -81,10 +81,10 @@ end;
 #
 # here there is no component group
 #
-handle8char2:=function(orbs,infos)
+handle8char2:=function()
     local o,rep,cc,ccc,zz,zzz,uu,dist_par;
 
-    o:=Classes(orbs)[8];
+    o:=AllClasses(orbs)[8];
     rep:=BorelRep(o);
     vals:=ShallowCopy(avars);
     vals[1]:=Zero(APR);
@@ -112,9 +112,9 @@ end;
 ##
 ## cls 7: C_3(a_1)
 ##
-#handle7char3:=function(orbs,infos)
+#handle7char3:=function()
 #    local tmp1,tmp2,o,info,rep,cent;
-#    o:=Classes(orbs)[7];
+#    o:=AllClasses(orbs)[7];
 #    info:=infos[7];
 #    
 #    rep:=Representative(o);
@@ -128,9 +128,9 @@ end;
 #
 # cls 6: F_4(a_3) [4,6,10,18] (finished?)
 #
-handle6char2:=function(orbs,infos)
+handle6char2:=function()
     local tmp1,tmp2,tmp3,tmp4,tmp5,tmp6,o,info,rep,cent,uu;
-    o:=Classes(orbs)[6];
+    o:=AllClasses(orbs)[6];
     info:=infos[6];
     
     rep:=Representative(o);
@@ -173,10 +173,10 @@ end;
 #
 # cls 3: F_4(a_2) (finished?)
 #
-handle3char2:=function(orbs,infos)
+handle3char2:=function()
     local tmp1,tmp2,o,info,rep,cent,uu,
     avars,vals,comp1,comp2;
-    o:=Classes(orbs)[3];
+    o:=AllClasses(orbs)[3];
     info:=infos[3];
     
     rep:=Representative(o);
@@ -296,9 +296,9 @@ end;
 #
 # cls 2: F_4(a_1)
 #
-handle2char2:=function(orbs,infos)
+handle2char2:=function()
     local tmp1,tmp2,o,info,rep,cent,uu;
-    o:=Classes(orbs)[2];
+    o:=AllClasses(orbs)[2];
     info:=infos[2];
     
     rep:=Representative(o);

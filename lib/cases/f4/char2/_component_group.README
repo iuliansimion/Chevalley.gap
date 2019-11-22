@@ -1,11 +1,14 @@
 char 2
 
-A2      C_2
-sA2     C_2
-B2      C_2 = <u>
-F4(a3)  S_3
-F4(a2)  D_8
+A2      C_2         DONE
+sA2     C_2         DONE
+B2      C_2 = <u>   DONE
+F4(a3)  S_3         DONE
+F4(a2)  D_8         DONE
 F4(a1)  C_2 = <u>
 B3      C_2 = <u>
 C3      C_2 = <u>
 F4      C_4 = <u>
+
+
+The handle methods are in /lib/components/F4char2.gi

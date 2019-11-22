@@ -1,21 +1,22 @@
 #
 # usage:
-# Read("~/Workspace/Chevalley.gap/init.gi"); Read(Filename(home_dir,"load.gi")); Read(Filename(f4_dir_char2,"B2.gi"));
+# Read("~/Workspace/Chevalley.gap/init.gi"); Read(Filename(home_dir,"load.gi")); Read(Filename(f4_dir_char2,"_init_char2.gi")); Read(Filename(f4_dir_char2,"B2.gi"));
 #
 # Read(Filename(f4_dir_char2,"B2.gi"));
 #
 
-ITER_POLY_WARN:=false;
-Read(Filename(home_dir,"lib/io.gi"));
-Read(Filename(home_dir,"handle.gi"));
+
+label:="B_2";
+orb_nr:=Position(labels,label);
+#orb:=AllClasses(orbs)[12];
+orb:=AllClasses(orbs)[orb_nr];
+info:=infos[orb_nr];
 
 
-sys:=ChevalleyAdj("F",4,GF(2));
-alg:=AlgebraicU(sys);
-orbs:=UnipotentClasses(alg,"");
+#
+# ------------------------------------------------------------------------
+#
 
-orb:=AllClasses(orbs)[12];
-info:=handleClassShort(orb);
 
 Print("Consider the class ",Label(orb)," in characteristic ",Characteristic(ring(sys)),":\n");
 Print("\tBorel representative \n\t",coefficients(BorelRep(orb)),"\n");
@@ -38,3 +39,12 @@ aZ0:=ApplyRootsReflections(Z0,n);
 
 Print("\ta^Z0=",coefficients(aZ0),"\n");
 Print("\tOne can also choose the representative of the class as component group representative\n");
+
+#
+# ------------------------------------------------------------------------
+#
+
+tmp:=handle12char2();
+Print("\nComponent group is C2.\n");
+Print("\ta^u= \n",coefficients(BorelRep(orb)),"\n");
+Print("\ta^Z0= \n",coefficients(info[1]),"\n");
